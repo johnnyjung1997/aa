@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <title>home</title>
+
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<body class="japan-plan">
+  <div class="nav-wrapper">
+    <div class="nav day-first">01</div>
+    <div class="nav day-second">02</div>
+    <div class="nav day-third">03</div>
+    <div class="nav day-fourth">04</div>
+    <div class="nav day-fifth">05</div>
+  </div>
+
+  <div class="timeline-wrapper">
+    <!-- 타임라인 아이템 -->
+    <div class="timeline six-elements">
+      <div class="timeline-item"><div class="content"><p>출발</p></div></div>
+      <div class="timeline-item"><div class="content"><p>비행기</p></div></div>
+      <div class="timeline-item"><div class="content"><p>일본</p></div></div>
+      <div class="timeline-item"><div class="content"><p>숙소</p></div></div>
+      <div class="timeline-item"><div class="content"><p>저녁</p></div></div>
+      <div class="timeline-item"><div class="content"><p>산책</p></div></div>
+    </div>
+    <!-- 타임라인 아이템 -->
+    <div class="timeline five-elements">
+      <div class="timeline-item"><div class="content"><p>조식</p></div></div>
+      <div class="timeline-item"><div class="content"><p>디저트</p></div></div>
+      <div class="timeline-item"><div class="content"><p>점심</p></div></div>
+      <div class="timeline-item"><div class="content"><p>오사카 성</p></div></div>
+      <div class="timeline-item"><div class="content"><p>저녁</p></div></div>
+    </div>
+  </div>
+
+  <script>
+    $('.nav').on('click', function(){
+      if($(this).hasClass('day-first')){
+        $('.timeline-wrapper').css('transform','translate(-0%,0)') 
+        console.log("/")
+      }
+      if($(this).hasClass('day-second')){
+        $('.timeline-wrapper').css('transform','translate(-50%,0)')
+      }
+    })
+  </script>
+
+</body>
+</html>
