@@ -32,22 +32,22 @@
 
   <body class="itinerary-wrapper">
     <!-- <div class="nav-menu"></div> -->
-
+    <h1>TRAVEL ITINERARY</h1>
     <div class="content-wrapper">
         <!-- 일본 여행 -->
         <div class="content japan-trip">
-            <span class="descript descript-left">Jun Sik Jung</span>
-            <span class="descript descript-right">Chae Ah Park</span>
-            <div class="cover-img">
-                <div class="japanBlossom"></div>
-            </div>
-            <div class="title">
-                <div class="text">JAPAN</div>
-                <span class="sub-text">TRAVEL INIERARY</span>
-            </div>
-            <div class="bottom">JAN 30 - FEB 04</div>
-            <a href="./about.html" class="see-detail">보러가기</a>
-
+            <a href="./about.html">
+                <span class="descript descript-left">Jun Sik Jung</span>
+                <span class="descript descript-right">Chae Ah Park</span>
+                <div class="cover-img">
+                    <div class="japanBlossom"></div>
+                </div>
+                <div class="title">
+                    <div class="text">JAPAN</div>
+                    <span class="sub-text">TRAVEL INIERARY</span>
+                </div>
+                <div class="bottom">JAN 30 - FEB 04</div>
+            </a>
         </div>
 
         <!-- 일본 여행 -->
@@ -77,27 +77,11 @@
             <div class="bottom">JAN 30 - FEB 04</div>
         </div>
 
-    </div>
-    <a href="./about.html">ddddddddddd</a>
-    <div class="modal-background none">
-        <div class="close-detail"></div>
     </div>
 
     <script>
       $(document).ready(function () {
-        $('.content-wrapper .content').on('click', function(){
-            $(this).css('position','absolute');
-            $(this).css('width','91%');
-            $(this).css('height','81%');
-            $(this).css('z-index','9999'); 
-            
-            $(this).find('.title .text').css('font-size','49px');
-            $(this).find('.title .text').css('margin-top','32px'); 
-            $(this).find('.title .sub-text').css('font-size','17px');  
-            $(this).find('.descript ').css('font-size','12px');  
-            $(this).find('.descript ').css('font-weight','500');  
-            $('.modal-background').toggleClass('none')
-        }) 
+
       });
     </script>
   </body>

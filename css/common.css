@@ -17,6 +17,7 @@ th,td {font-weight: normal;padding: 0.25em 0.5em;line-height: 1.5;min-height: 1.
 th {color: rgba(55, 53, 47, 0.6);text-align: center;}
 .simple-table-header-color {background: rgb(247, 246, 243);color: black;}
 .small-text {font-size: 0.6em;color: #f05d5e;}
+a{text-decoration: none;color: black;} 
 
 /* ================================================================ */
 .none{display: none;}
@@ -45,9 +46,9 @@ footer{position: absolute; bottom: 3vh; background-color: white;width: 94%; heig
 .japan-trip .title .text{font-family: "Playfair Display", serif;display: flex; margin-top: 2%; z-index: 1;justify-content: center; font-size: 25px; width: 60%; background-color: rgb(232 251 255); height: 63%; font-weight: 600;}
 .japan-trip .title::before{position:absolute; z-index: 0; content: '';left: 0; width: 100%; height: 1px; top: 35%; background-color: rgb(156, 156, 156); }
 .japan-trip .title .sub-text{font-size: 11px;height: 35%;}
-
-.see-detail{position: absolute; background-color: rgb(0, 0, 0); bottom: -15%;width: 100%; color: white;}
-.close-detail{position: absolute;border-radius: 50%; background-color: rgb(0, 0, 0); top: 1%; right: 1%; width: 30px; height: 30px; color: white;z-index: 1000;}
+ 
+.see-detail{position: absolute; background-color: rgb(0, 0, 0); bottom: -1%;width: 100%; color: white;}
+.close-detail{position: absolute; background-color: rgb(0, 0, 0); bottom: -5%;width: 100%; color: white;}
  
   
 table{width: 100%;font-size: 0.9rem; margin-bottom: 10vh;}
@@ -96,15 +97,21 @@ table th:nth-child(3), table td:nth-child(3) {width: auto;}
   25%{background-color: white;border: 1px solid #ccc;} 
   100%{border: 2px solid #ccc;}
 }
-a{text-decoration: none; border-bottom: 1px solid rgb(99, 158, 235);color: rgb(99, 158, 235);}
 
 .japan-plan{background-color: #f6f6f6;}
 .nav-wrapper{width: 100%; display: flex; justify-content:space-around;}
-.nav-wrapper .nav{ font-family: "Roboto", serif;font-size: 45px; font-weight: 800; position: relative;} 
-.nav-wrapper .nav::before{position: absolute;content: ''; width: 100%; height: 21px;bottom: 0;left: 0; background-color: #f6f6f6;box-shadow: 0px -5px 12px 0px rgb(125 125 125);} 
-.nav-wrapper .nav::after{position: absolute;content: ''; width: 140%; height: 33px;bottom: -10px;left: -20%; z-index: 1; background-color: #f6f6f6 }  
+.nav-wrapper .nav{ font-family: "Roboto", serif;font-size: 45px; font-weight: 800; position: relative;  perspective: 600px;} 
+.nav-wrapper .nav.active::before,.nav-wrapper .nav.active::after{ z-index: -1;    animation: chooseNav 1s ease;}
+.nav-wrapper .nav::before{ transform: rotateX(-1deg); position: absolute;content: ''; width: 100%; height: 21px;bottom: 0;left: 0; background-color: #f6f6f6;box-shadow: 0px -5px 12px 0px rgb(125 125 125);} 
+.nav-wrapper .nav::after{ transform: rotateX(-1deg); position: absolute;content: ''; width: 140%; height: 33px;bottom: -10px;left: -20%; z-index: 1; background-color: #f6f6f6 }  
 .nav-wrapper .nav:nth-child(1){color: #9ec3fb;}
 .nav-wrapper .nav:nth-child(2){color: #ffbcb8;}
 .nav-wrapper .nav:nth-child(3){color: #FFD1D1;}
 .nav-wrapper .nav:nth-child(4){color: #FF9494;}
 .nav-wrapper .nav:nth-child(5){color: #9694ff;}
+@keyframes chooseNav{
+  0%{transform: translate3d(0, 0, 0); z-index: 1;}
+  50%{transform: translate3d(0, 15px, 0); z-index: 1;}
+  51%{transform: translate3d(0, 15px, 0); z-index: -1;} 
+  100%{transform: translate3d(0, 0, 0); z-index: -1;}
+}

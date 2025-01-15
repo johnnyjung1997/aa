@@ -12,8 +12,8 @@
 </head>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <body class="japan-plan">
-  <div class="nav-wrapper">
-    <div class="nav day-first">01</div>
+  <div style="margin-top: 50px;" class="nav-wrapper">
+    <div class="nav active day-first">01</div>
     <div class="nav day-second">02</div>
     <div class="nav day-third">03</div>
     <div class="nav day-fourth">04</div>
@@ -42,9 +42,10 @@
 
   <script>
     $('.nav').on('click', function(){
+      $(this).siblings().removeClass('active'); 
+      $(this).addClass('active');
       if($(this).hasClass('day-first')){
         $('.timeline-wrapper').css('transform','translate(-0%,0)') 
-        console.log("/")
       }
       if($(this).hasClass('day-second')){
         $('.timeline-wrapper').css('transform','translate(-50%,0)')
