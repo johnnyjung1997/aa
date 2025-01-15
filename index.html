@@ -31,29 +31,13 @@
   <style></style>
 
   <body class="itinerary-wrapper">
-    <header>
-      <div id="nav-icon2">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </header>
     <!-- <div class="nav-menu"></div> -->
 
-    <div class="index-top">
-      <span id="dday"></span>
-    </div>
-
-    <div>
-      <button class="left">left</button>
-      <button class="right">right</button>
-    </div>
-
     <div class="content-wrapper">
+        <!-- 일본 여행 -->
         <div class="content japan-trip">
+            <span class="descript descript-left">Jun Sik Jung</span>
+            <span class="descript descript-right">Chae Ah Park</span>
             <div class="cover-img">
                 <div class="japanBlossom"></div>
             </div>
@@ -61,94 +45,59 @@
                 <div class="text">JAPAN</div>
                 <span class="sub-text">TRAVEL INIERARY</span>
             </div>
+            <div class="bottom">JAN 30 - FEB 04</div>
+            <a href="./about.html" class="see-detail">보러가기</a>
+
         </div>
+
+        <!-- 일본 여행 -->
+        <div class="content japan-trip">
+            <span class="descript descript-left">Jun Sik Jung</span>
+            <span class="descript descript-right">Chae Ah Park</span>
+            <div class="cover-img">
+                <div class="japanBlossom"></div>
+            </div>
+            <div class="title">
+                <div class="text">JAPAN</div>
+                <span class="sub-text">TRAVEL INIERARY</span>
+            </div>
+            <div class="bottom">JAN 30 - FEB 04</div>
+        </div>
+        <!-- 일본 여행 -->
+        <div class="content japan-trip">
+            <span class="descript descript-left">Jun Sik Jung</span>
+            <span class="descript descript-right">Chae Ah Park</span>
+            <div class="cover-img">
+                <div class="japanBlossom"></div>
+            </div>
+            <div class="title">
+                <div class="text">JAPAN</div>
+                <span class="sub-text">TRAVEL INIERARY</span>
+            </div>
+            <div class="bottom">JAN 30 - FEB 04</div>
+        </div>
+
     </div>
     <a href="./about.html">ddddddddddd</a>
-    <!-- <span class="photoTitle">2025</span>
-        <div class="photoSummary">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
-                </div>
-            </div>
-        </div>
-
-        <span class="photoTitle">2024</span>
-        <div class="photoSummary">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
-                </div>
-            </div>
-        </div>
-        <span class="photoTitle">2023</span>
-        <div class="photoSummary">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
-                </div>
-            </div>
-        </div>-->
+    <div class="modal-background none">
+        <div class="close-detail"></div>
+    </div>
 
     <script>
-      // let startDate = new Date("2023-08-08");
-      // let todayDate = new Date();
-      // let diffTime = todayDate.getTime() - startDate.getTime();
-      // let diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-      var mySwiper = new Swiper(".mySwiper", {
-        slidesPerView: 2.7, // 한 번에 표시할 슬라이드 수
-        spaceBetween: 20, // 슬라이드 간의 간격
-        loop: true, // 슬라이드 루프(무한 회전) 활성화
-        // autoplay: {
-        //     delay: 4000, // 3초마다 자동 재생
-        //     disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
-        // },
-        mousewheel: true, // 마우스 휠로 슬라이드 이동 가능
-        centeredSlides: true, // 슬라이드 중앙 정렬
-      });
-
       $(document).ready(function () {
-        $("#dday").text(diffDays + "일");
-      });
-      $(".right").on("click", function () {
-        $(".wrapper").addClass("right");
-      });
-      $(".left").on("click", function () {
-        $(".wrapper").removeClass("right");
-      });
-
-      $(document).ready(function () {
-        $("#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4").click(function () {
-          $(this).toggleClass("open");
-          // $('.nav-menu').toggleClass('none')
-          $(".nav-menu").toggleClass("active");
-        });
-
+        $('.content-wrapper .content').on('click', function(){
+            $(this).css('position','absolute');
+            $(this).css('width','91%');
+            $(this).css('height','81%');
+            $(this).css('z-index','9999'); 
+            
+            $(this).find('.title .text').css('font-size','49px');
+            $(this).find('.title .text').css('margin-top','32px'); 
+            $(this).find('.title .sub-text').css('font-size','17px');  
+            $(this).find('.descript ').css('font-size','12px');  
+            $(this).find('.descript ').css('font-weight','500');  
+            $('.modal-background').toggleClass('none')
+        }) 
       });
     </script>
   </body>
