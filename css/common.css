@@ -24,28 +24,46 @@ a{text-decoration: none;color: black;}
 .wrapper.right{background-position: right!important; transition: all 0.9s ease;}
 footer{position: absolute; bottom: 3vh; background-color: white;width: 94%; height: 10vh; opacity: 0.5; border-radius: 30px; margin: 0 3%;    box-shadow: 0 0 8px 0 rgb(187 187 187);}
  .modal-background{position: absolute;top: 0;left: 0; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.329);z-index: 998;}
-
+body{margin: 0; padding: 0;}
  /* index */ 
 /* background-image: url("../images/background.png"); */
-.itinerary-wrapper{ font-family: "Roboto", serif;  position: absolute;width: 100%; height: 100vh;overflow: hidden;background-position: left!important;    background-repeat: no-repeat; transition: all 0.9s ease;} 
+.itinerary-wrapper{ padding: 0;margin: 0; font-family: "Roboto", serif;  position: absolute;width: 100%; height: 100vh;overflow: hidden;background-position: left!important;    background-repeat: no-repeat; transition: all 0.9s ease;} 
+.itinerary-title {width: 100%; font-size: 30px; font-weight: 500; text-align: center; margin-top: 5%;} 
+ 
 .index-top{height: 50vh; width: 100%;} 
 .itinerary-wrapper .content-wrapper{width: 100%; height: auto; overflow: scroll; display: flex; padding: 2% 4%; gap: 3%;flex-wrap: wrap;    box-sizing: border-box;justify-content: space-between;}
 .itinerary-wrapper .content-wrapper .content{transition: all 0.4s linear; width: 44%; height: 250px; background-color: white;  border-radius: 3px; margin-top: 20px;box-shadow:0 0 8px 0 rgb(165 165 165);}  
 .itinerary-wrapper .content-wrapper .content .descript{position: absolute; font-size: 8px; color: #393939;}
 .itinerary-wrapper .content-wrapper .content .descript-left{rotate: -90deg; left: -16px; top: 32px;}   
 .itinerary-wrapper .content-wrapper .content .descript-right{rotate: 90deg; right: -16px; bottom: 41%;}  
-.itinerary-wrapper .content-wrapper .content.japan-trip{position: relative;}
-.itinerary-wrapper .content-wrapper .content.japan-trip::before, .itinerary-wrapper .content-wrapper .content.japan-trip::after{position: absolute; content: '';width: 1px; height: 100%; background-color:rgb(191 191 191); top: 0}
-.itinerary-wrapper .content-wrapper .content.japan-trip::before{left: 7%;}  
-.itinerary-wrapper .content-wrapper .content.japan-trip::after{right: 7%;} 
-.itinerary-wrapper .content-wrapper .content .bottom{ position: absolute; bottom: 0; width: 100%; text-align: center; font-size: 8px;margin-bottom: 1px;} 
+.itinerary-wrapper .content-wrapper .content{position: relative;}
+.itinerary-wrapper .content-wrapper .content::before, .itinerary-wrapper .content-wrapper .content::after{position: absolute; content: '';width: 1px; height: 100%; background-color:rgb(191 191 191); top: 0}
+.itinerary-wrapper .content-wrapper .content::before{left: 7%;}  
+.itinerary-wrapper .content-wrapper .content::after{right: 7%;} 
+.itinerary-wrapper .content-wrapper .content .bottom{ position: absolute; bottom: 0; width: 100%;height: auto; text-align: center; font-size: 8px;margin-bottom: 2px;} 
 
-.itinerary-wrapper .content-wrapper .content .cover-img{display: flex; justify-content: center; height: 67%;}
-.japan-trip .japanBlossom{height: 100%; width: 71%; background-size: cover;    background-position: center;background-image: url("../images/japanIndex.jpg");}
-.japan-trip .title{position: absolute;display: flex; align-items: center;  flex-direction: column;align-items: center; bottom: 7%; width: 100%; background-color: rgb(232 251 255); height: 26%; text-align: center; z-index: 1;box-shadow: 0 0 4px 0 rgb(168, 168, 168); }
-.japan-trip .title .text{font-family: "Playfair Display", serif;display: flex; margin-top: 2%; z-index: 1;justify-content: center; font-size: 25px; width: 60%; background-color: rgb(232 251 255); height: 63%; font-weight: 600;}
-.japan-trip .title::before{position:absolute; z-index: 0; content: '';left: 0; width: 100%; height: 1px; top: 35%; background-color: rgb(156, 156, 156); }
-.japan-trip .title .sub-text{font-size: 11px;height: 35%;}
+.itinerary-wrapper .content-wrapper .content .cover-img{display: flex; justify-content: center; height: 67%;width: 100%;}
+/* 커버사진 */
+.content div{height: 100%; width: 71%; background-size: cover;    background-position: center;background-image: url("../images/japanIndex.jpg");}
+/* 일본 */
+.content .japan{background-image: url("../images/japan.jpg");}
+.content.japan-trip .title{background-color: rgb(232 251 255);}
+.content.japan-trip .title .text{background-color: rgb(232 251 255);}
+/* 속초 */ 
+.content .sokcho{background-image: url("../images/sokcho.jpg");}
+.content.sokcho-trip .title{background-color: rgb(224, 230, 252);}
+.content.sokcho-trip .title .text{background-color: rgb(224, 230, 252);}
+/* 인천 */
+.content .incheon{background-image: url("../images/incheon.jpg");}
+.content.incheon-trip .title{background-color: rgb(244 237 219);}
+.content.incheon-trip .title .text{background-color: rgb(244 237 219);}
+
+  
+
+.content .title{position: absolute;display: flex; align-items: center;  flex-direction: column;align-items: center; bottom: 7%; width: 100%; height: 26%; text-align: center; z-index: 1;box-shadow: 0 0 4px 0 rgb(168, 168, 168); }
+.content .title .text{font-family: "Playfair Display", serif;display: flex; margin-top: 2%; z-index: 1;justify-content: center; font-size: 25px; width: 60%;height: 63%; font-weight: 600;}
+.content .title::before{position:absolute; z-index: 0; content: '';left: 0; width: 100%; height: 1px; top: 35%; background-color: rgb(156, 156, 156); }
+.content .title .sub-text{font-size: 11px;height: 35%;}
  
 .see-detail{position: absolute; background-color: rgb(0, 0, 0); bottom: -1%;width: 100%; color: white;}
 .close-detail{position: absolute; background-color: rgb(0, 0, 0); bottom: -5%;width: 100%; color: white;}
@@ -65,8 +83,8 @@ table th:nth-child(3), table td:nth-child(3) {width: auto;}
 0% {background-position: 80% 4%;}
 100% {background-position: -55% 4%;} 
 }      
-.timeline-container {position: relative;width: 70%;}
-.timeline-wrapper{transform: translate(0%,0); position: absolute; width: 200%;display: flex; transition: all 1s ease;}
+.timeline-container {position: relative;width: 70%;} 
+.timeline-wrapper{transform: translate(0%,0); position: absolute; width: 600%;display: flex; transition: all 1s ease;}
 .timeline {width: 100%; position: relative;display: flex;align-items: center;justify-content: space-between;padding: 20px 0;margin-bottom: 15px;}
 .timeline-item {position: relative;flex: 1;text-align: center;z-index: 2;}
 .timeline-item .content {font-size: 0.8rem;font-weight: 600;transform: translateY(20px);color: #3c3c3c;}
@@ -98,12 +116,12 @@ table th:nth-child(3), table td:nth-child(3) {width: auto;}
   100%{border: 2px solid #ccc;}
 }
 
-.japan-plan{background-color: #f6f6f6;}
+.japan-detail{background-color: #f6f6f6;}
 .nav-wrapper{width: 100%; display: flex; justify-content:space-around;}
-.nav-wrapper .nav{ font-family: "Roboto", serif;font-size: 45px; font-weight: 800; position: relative;  perspective: 600px;} 
+.nav-wrapper .nav{ font-family: "Roboto", serif;font-size: 42px; font-weight: 800; position: relative;  perspective: 600px;} 
 .nav-wrapper .nav.active::before,.nav-wrapper .nav.active::after{ z-index: -1;    animation: chooseNav 1s ease;}
-.nav-wrapper .nav::before{ transform: rotateX(-1deg); position: absolute;content: ''; width: 100%; height: 21px;bottom: 0;left: 0; background-color: #f6f6f6;box-shadow: 0px -5px 12px 0px rgb(125 125 125);} 
-.nav-wrapper .nav::after{ transform: rotateX(-1deg); position: absolute;content: ''; width: 140%; height: 33px;bottom: -10px;left: -20%; z-index: 1; background-color: #f6f6f6 }  
+.nav-wrapper .nav::before{ transform: rotateX(-1deg); position: absolute;content: ''; width: 100%; height: 17px;bottom: 0;left: 0; background-color: #f6f6f6;box-shadow: 0px -5px 12px 0px rgb(125 125 125);} 
+.nav-wrapper .nav::after{ transform: rotateX(-1deg); position: absolute;content: ''; width: 140%; height: 29px;bottom: -10px;left: -20%; z-index: 1; background-color: #f6f6f6 }  
 .nav-wrapper .nav:nth-child(1){color: #9ec3fb;}
 .nav-wrapper .nav:nth-child(2){color: #ffbcb8;}
 .nav-wrapper .nav:nth-child(3){color: #FFD1D1;}

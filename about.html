@@ -11,17 +11,18 @@
   <link rel="stylesheet" href="css/common.css" />
 </head>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<body class="japan-plan">
+<body class="japan-detail">
   <div style="margin-top: 50px;" class="nav-wrapper">
     <div class="nav active day-first">01</div>
     <div class="nav day-second">02</div>
     <div class="nav day-third">03</div>
     <div class="nav day-fourth">04</div>
     <div class="nav day-fifth">05</div>
+    <div class="nav day-sixth">06</div>
   </div>
 
   <div class="timeline-wrapper">
-    <!-- 타임라인 아이템 -->
+    <!-- 타임라인 아이템 1일차 -->
     <div class="timeline six-elements">
       <div class="timeline-item"><div class="content"><p>출발</p></div></div>
       <div class="timeline-item"><div class="content"><p>비행기</p></div></div>
@@ -30,7 +31,7 @@
       <div class="timeline-item"><div class="content"><p>저녁</p></div></div>
       <div class="timeline-item"><div class="content"><p>산책</p></div></div>
     </div>
-    <!-- 타임라인 아이템 -->
+    <!-- 타임라인 아이템 2일차-->
     <div class="timeline five-elements">
       <div class="timeline-item"><div class="content"><p>조식</p></div></div>
       <div class="timeline-item"><div class="content"><p>디저트</p></div></div>
@@ -38,7 +39,40 @@
       <div class="timeline-item"><div class="content"><p>오사카 성</p></div></div>
       <div class="timeline-item"><div class="content"><p>저녁</p></div></div>
     </div>
+    <!-- 타임라인 아이템 3일차-->
+    <div class="timeline four-elements">
+      <div class="timeline-item"><div class="content"><p>조식</p></div></div>
+      <div class="timeline-item"><div class="content"><p>점심</p></div></div>
+      <div class="timeline-item"><div class="content"><p>시장</p></div></div>
+      <div class="timeline-item"><div class="content"><p>자유롭게</p></div></div>
+    </div>
+    <!-- 타임라인 아이템 4일차-->
+    <div class="timeline five-elements">
+      <div class="timeline-item"><div class="content"><p>조식</p></div></div>
+      <div class="timeline-item"><div class="content"><p>나고야</p></div></div>
+      <div class="timeline-item"><div class="content"><p>숙소</p></div></div>
+      <div class="timeline-item"><div class="content"><p>자유롭게</p></div></div>
+      <div class="timeline-item"><div class="content"><p>저녁</p></div></div>
+    </div>
+    <!-- 타임라인 아이템 5일차-->
+    <div class="timeline four-elements">
+      <div class="timeline-item"><div class="content"><p>사카에역</p></div></div>
+      <div class="timeline-item"><div class="content"><p>나고야</p></div></div>
+      <div class="timeline-item"><div class="content"><p>저녁</p></div></div>
+      <div class="timeline-item"><div class="content"><p>산책 및 휴식</p></div></div>
+    </div>
+
+    <!-- 타임라인 아이템 6일차-->
+    <div class="timeline five-elements">
+      <div class="timeline-item"><div class="content"><p>조식</p></div></div>
+      <div class="timeline-item"><div class="content"><p>체크아웃</p></div></div>
+      <div class="timeline-item"><div class="content"><p>점심</p></div></div>
+      <div class="timeline-item"><div class="content"><p>공항</p></div></div>
+      <div class="timeline-item"><div class="content"><p>THE END</p></div></div>
+    </div>
+
   </div>
+  
 
   <script>
     $('.nav').on('click', function(){
@@ -46,9 +80,19 @@
       $(this).addClass('active');
       if($(this).hasClass('day-first')){
         $('.timeline-wrapper').css('transform','translate(-0%,0)') 
-      }
-      if($(this).hasClass('day-second')){
+      } else if($(this).hasClass('day-second')){
+        $('.timeline-wrapper').css('transform','translate(-16.666%,0)')
+      } else if($(this).hasClass('day-third')){
+        $('.timeline-wrapper').css('transform','translate(-33.333%,0)')
+        
+      }else if($(this).hasClass('day-fourth')){
         $('.timeline-wrapper').css('transform','translate(-50%,0)')
+        
+      }else if($(this).hasClass('day-fifth')){
+        $('.timeline-wrapper').css('transform','translate(-66.666%,0)')
+        
+      }else if($(this).hasClass('day-sixth')){
+        $('.timeline-wrapper').css('transform','translate(-83.333%,0)')
       }
     })
   </script>
