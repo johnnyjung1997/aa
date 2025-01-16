@@ -75,8 +75,8 @@ table th:nth-child(3), table td:nth-child(3) {width: auto;}
 /* 타임라인 아이템 스타일 */
 @keyframes gradientMove {0% {background-position: 80% 4%;}100% {background-position: -55% 4%;}}      
 @keyframes fillColor{ 0%{border: 1px solid rgb(95, 95, 95);background-color: rgb(95, 95, 95);}25%{background-color: white;border: 1px solid #ccc;} 100%{border: 2px solid #ccc;}}
-@keyframes chooseNav{0%{transform: translate3d(0, 0, 0); z-index: 1;}50%{transform: translate3d(0, 15px, 0); z-index: 1;}51%{transform: translate3d(0, 15px, 0); z-index: -1;} 100%{transform: translate3d(0, 0, 0); z-index: -1;}}
-
+/* @keyframes chooseNav{0%{transform: translate3d(0, 0, 0); z-index: 1;}50%{transform: translate3d(  15px,0, 0); z-index: 1;}51%{transform: translate3d( 15px, 0, 0); z-index: -1;} 90%{transform: translate3d( 7px, 0, 0);width: 100%;} 100%{transform: translate3d(0, 0, 0); z-index: -1; width: 100%;}} */
+ 
 .timeline:before {content: "";position: absolute;top: 50%;left: 0;width: 100%;height: 2px;z-index: 1; transform: translateY(-50%); background:linear-gradient(to right,#ccc 20%, rgb(95, 95, 95) 40%, #ccc 20%);background-position: 80% 4%;background-size: 200% 100%; animation: 8s linear gradientMove infinite;} 
 .timeline-container {position: relative;width: 70%;} 
 .timeline-wrapper{transform: translate(0%,0);width: 600%;display: flex; transition: all 1s ease; background-color: white;}
@@ -103,17 +103,20 @@ table th:nth-child(3), table td:nth-child(3) {width: auto;}
 .four-elements .timeline-item:nth-of-type(3) {--delay: 3.7s;}  
 .four-elements .timeline-item:nth-of-type(4) {--delay: 5.2s;} 
 
-.nav-wrapper{width: 100%; display: flex; justify-content:space-around;}
-.nav-wrapper .nav{ font-family: "Roboto", serif;font-size: 42px; font-weight: 800; position: relative;  perspective: 600px;} 
-.nav-wrapper .nav.active::before,.nav-wrapper .nav.active::after{ z-index: -1;    animation: chooseNav 1s ease;}
-.nav-wrapper .nav::before{transform: rotateX(-1deg); position: absolute;content: ''; width: 100%; height: 14px;bottom: 0;left: 0; background-color: #f6f6f6;box-shadow: 0px -5px 12px 0px rgb(125 125 125);} 
-.nav-wrapper .nav::after{transform: rotateX(-1deg); position: absolute;content: ''; width: 140%; height: 26px;bottom: -10px;left: -20%; z-index: 1; background-color: #f6f6f6 }  
-.nav-wrapper .nav:nth-child(1){color: #9ec3fb;}
-.nav-wrapper .nav:nth-child(2){color: #ffbcb8;}
-.nav-wrapper .nav:nth-child(3){color: #FFD1D1;}
-.nav-wrapper .nav:nth-child(4){color: #FF9494;}
-.nav-wrapper .nav:nth-child(5){color: #9694ff;}
-.nav-wrapper .nav:nth-child(6){color: #f09edb;}
+.plan-wrapper{width: 100%; background-color: #f6f6f6;height: 70vh;overflow: hidden;display: flex;} 
+.plan-nav-wrapper{ display: flex; justify-content:space-around;flex-direction: column; width: 14%;height: 300px;}
+.plan-nav-wrapper .nav{font-family: "Roboto", serif;font-size: 1.6rem; font-weight: 800; position: relative;  perspective: 600px;height: 100%; display: flex; align-items: center;padding-left: 7px;box-shadow: -19px 0px 7px 2px rgba(255, 255, 255, 0);transition: box-shadow 0.7s ease;} 
+.plan-nav-wrapper .nav.active{box-shadow: -19px 0px 7px 2px rgb(209, 209, 209);transition: box-shadow 0.7s ease;}
+.plan-nav-wrapper .nav.active::before,.plan-nav-wrapper .nav.active::after{ z-index: -1;  transform: translate3d(  15px,0, 0);background-color: #f6f6f6;box-shadow: -7px 0px 7px 0px rgba(125, 125, 125, 0);transition: all 0.6s ease;} 
+.plan-nav-wrapper .nav::before{transition: transform 0.6s ease;transform: rotateX(-1deg); position: absolute;content: ''; width: 27%; height: 73%;top: 15%;right: 4%; background-color: #f6f6f6;box-shadow:-9px 0 8px 1px rgb(152 151 151);} 
+.plan-nav-wrapper .nav::after{transition: transform 0.6s ease;transform: rotateX(-1deg); position: absolute;content: ''; width: 35%; height: 100%;top: 0;right: 4%; z-index: 1; background-color: #f6f6f6 }  
+.plan-nav-wrapper .nav:nth-child(1){color: #9ec3fb;}
+.plan-nav-wrapper .nav:nth-child(2){color: #ffbcb8;}
+.plan-nav-wrapper .nav:nth-child(3){color: #FFD1D1;} 
+.plan-nav-wrapper .nav:nth-child(4){color: #FF9494;}
+.plan-nav-wrapper .nav:nth-child(5){color: #9694ff;} 
+.plan-nav-wrapper .nav:nth-child(6){color: #9694ff;}
 
+.plan-content-wrapper{flex: 1; height: 100%;z-index: 1; overflow: scroll;padding: 4% 2% 4% 0;}
 
 .pointer{transition: all 0.8s ease; position: relative;left: 8.33%;transform: translateX(-50%);width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent; border-bottom: 10px solid #ffffff;}
