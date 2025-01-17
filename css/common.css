@@ -118,12 +118,12 @@ footer{position: absolute; bottom: 3vh; background-color: white;width: 94%; heig
   96%{opacity: 1;right: 25%; width: 60px;}
   100%{opacity: 1; right: 25%; width: 0px;}}
  
-.overview-wrapper{display: flex;padding: 11% 4% 3% 4%; box-sizing: border-box;}
+.overview-wrapper{display: flex;padding: 11% 7% 3% 7%; box-sizing: border-box; overflow: scroll;}
 .overview-wrapper .overview{width: 100%; height: 100%; position: relative;} 
 .overview-wrapper .overview::before{position: absolute; content: ''; width: 25%; height: 4px;right: 75%; top: -1px; background-color: #f6f6f6; z-index: 1;}
-.overview-wrapper .overview .top{position: relative; width: 100%; height: 32%;  border-top: 2px solid rgb(180, 180, 180);border-right: 2px solid rgb(180, 180, 180); display: flex;}
-.overview-wrapper .overview .mid{position: relative; width: 100%; height: 32%; border-top: 2px solid rgb(180, 180, 180); border-left: 2px solid rgb(180, 180, 180);border-bottom: 2px solid rgb(180, 180, 180);   display: flex;}
-.overview-wrapper .overview .bott{position: relative; width: 100%; height: 32%; display: flex;} 
+.overview-wrapper .overview .top{position: relative; width: 100%;  border-top: 2px solid rgb(180, 180, 180);border-right: 2px solid rgb(180, 180, 180); display: flex;}
+.overview-wrapper .overview .mid{position: relative; width: 100%;; border-top: 2px solid rgb(180, 180, 180); border-left: 2px solid rgb(180, 180, 180);border-bottom: 2px solid rgb(180, 180, 180);   display: flex;}
+.overview-wrapper .overview .bott{position: relative; width: 100%; display: flex;} 
 
 .overview-wrapper .top-left, .overview-wrapper .top .top-right, .overview-wrapper .mid-left, .overview-wrapper .mid .mid-right, .overview-wrapper .bott .bott-left, .overview-wrapper .bott .bott-right{width: 45%; margin: 5% 2.5%;}
 .overview-wrapper .overview .top::before{animation: topTop 8s linear infinite; position: absolute; content: ''; background-color: #6c98ff; height: 4px;top: -3px; z-index: 1;}
@@ -134,9 +134,9 @@ footer{position: absolute; bottom: 3vh; background-color: white;width: 94%; heig
 .overview-wrapper .overview .bott::after{position: absolute; content: ''; width: 25%; height: 4px;right: -2px; top: -3px; background-color: #f6f6f6; z-index: 1;}
  
 .locatioin-icon{position: absolute;z-index: 4; width: 48%; height: 45px; transform: translateY(-107%); background-image: url(../images/locationIcon.png); background-position: center;background-size: contain; background-repeat: no-repeat;} 
-.location-content{ width: 100%;height: 91%;background-color: white;box-shadow:2px 1px 5px 0px rgb(89 89 89 / 53%);;padding: 3% 3% 0% 3%;box-sizing: border-box;}
+.location-content{width: 100%;aspect-ratio: 19 / 21;background-color: white;box-shadow:2px 1px 5px 0px rgb(89 89 89 / 53%);;padding: 3% 3% 0% 3%;box-sizing: border-box;}
 .location-img{ background-position: center; background-repeat: no-repeat;width: 100%;height: 80%;    background-size: cover;}
-.location-name{display: flex; justify-content: center; align-items: center; height: 20%;font-family: "Tilt Warp", serif; font-size: 14px;} 
+.location-name{display: flex; justify-content: center; align-items: center; height: 20%;font-family: "Tilt Warp", serif; font-size: 1rem;} 
 /* 인천 */ 
 .location-incheon{background-image: url(../images/overview/incheonOverview.jpeg);}
 .location-osaka{background-image: url(../images/overview/osakaOverview.jpg);}
