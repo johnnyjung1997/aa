@@ -22,24 +22,43 @@
     <!-- menu nav -->
     <div  class="menu-nav-wrapper">
       <div class="menu-nav" >
-        <div class="active">Overview</div>
-        <div>Transport</div>
-        <div>Hotel</div>
-        <div>Packing List</div>
-        <div>Itinerary</div>
-        <div>Expenses</div>
+        <div class="active menu-nav-ele overview">Overview</div>
+        <div class="menu-nav-ele ">Transport</div>
+        <div class="menu-nav-ele">Hotel</div>
+        <div class="menu-nav-ele">Packing List</div>
+        <div class="menu-nav-ele itinerary">Itinerary</div>
+        <div class="menu-nav-ele">Expenses</div>
       </div>
     </div>
   </div>
 
-
   <!-- overview -->
- 
+  <div class="nav-select overview-wrapper bg-silver">
+    <div class="overview">
+      <div class="top">
+        <div class="top-left">
+          <div class="locatioin-icon"></div>
+        </div> 
+        <div class="top-right"><div class="locatioin-icon"></div></div>
+      </div>
+      
+      <div class="mid">
+        <div class="mid-left"><div class="locatioin-icon"></div></div>
+        <div class="mid-right"><div class="locatioin-icon"></div></div>
+      </div>
+      
+      <div class="bott">
+        <div class="bott-left"><div class="locatioin-icon"></div></div>
+        <div class="bott-right"><div class="locatioin-icon"></div></div>
+      </div>
+    </div>
+
+  </div>
 
 
 
   <!-- plan -->
-  <div class="plan-wrapper">
+  <div class="nav-select itinerary-wrapper bg-silver none">
     <!-- plan-nav -->
     <div class="plan-nav-wrapper">
       <div class="nav active day-first">01</div>
@@ -57,38 +76,49 @@
     </div>
   </div>
 
-  <div class="pointer"></div>
-  <div></div>
-
- 
-  
 
   <script>
-    $('.nav').on('click', function(){
-      $(this).siblings().removeClass('active'); 
-      $(this).addClass('active');
-      if($(this).hasClass('day-first')){
-        $('.timeline-wrapper').css('transform','translate(-0%,0)') 
-        $('.pointer').css('left', '8.333%')
-      } else if($(this).hasClass('day-second')){
-        $('.timeline-wrapper').css('transform','translate(-16.666%,0)')
-        $('.pointer').css('left', '25%')
-      } else if($(this).hasClass('day-third')){
-        $('.timeline-wrapper').css('transform','translate(-33.333%,0)')
-        $('.pointer').css('left', '41.666%')
-        
-      }else if($(this).hasClass('day-fourth')){
-        $('.timeline-wrapper').css('transform','translate(-50%,0)')
-        $('.pointer').css('left', '58.333%')
-        
-      }else if($(this).hasClass('day-fifth')){
-        $('.timeline-wrapper').css('transform','translate(-66.666%,0)')
-        $('.pointer').css('left', '75%')
-        
-      }else if($(this).hasClass('day-sixth')){
-        $('.timeline-wrapper').css('transform','translate(-83.333%,0)')
-        $('.pointer').css('left', '91.666%')
-      }
+    $(document).ready(function(){
+
+      $('.nav').on('click', function(){
+        $(this).siblings().removeClass('active'); 
+        $(this).addClass('active');
+        if($(this).hasClass('day-first')){
+          $('.timeline-wrapper').css('transform','translate(-0%,0)') 
+          $('.pointer').css('left', '8.333%')
+        } else if($(this).hasClass('day-second')){
+          $('.timeline-wrapper').css('transform','translate(-16.666%,0)')
+          $('.pointer').css('left', '25%')
+        } else if($(this).hasClass('day-third')){
+          $('.timeline-wrapper').css('transform','translate(-33.333%,0)')
+          $('.pointer').css('left', '41.666%')
+          
+        }else if($(this).hasClass('day-fourth')){
+          $('.timeline-wrapper').css('transform','translate(-50%,0)')
+          $('.pointer').css('left', '58.333%')
+          
+        }else if($(this).hasClass('day-fifth')){
+          $('.timeline-wrapper').css('transform','translate(-66.666%,0)')
+          $('.pointer').css('left', '75%')
+          
+        }else if($(this).hasClass('day-sixth')){
+          $('.timeline-wrapper').css('transform','translate(-83.333%,0)')
+          $('.pointer').css('left', '91.666%')
+        }
+      })
+
+      $('.menu-nav-ele').on('click', function(){
+        $(this).siblings().removeClass('active'); 
+        $(this).addClass('active');
+
+        if($(this).hasClass('overview')){
+          $('.nav-select').addClass('none')
+          $('.overview-wrapper').removeClass('none')
+        } else if($(this).hasClass('itinerary')){
+          $('.nav-select').addClass('none')
+          $('.itinerary-wrapper').removeClass('none')
+        }
+      })
     })
   </script>
 
