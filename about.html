@@ -33,7 +33,7 @@
   </div>
 
   <!-- overview -->
-  <div class="nav-select overview-wrapper bg-silver">
+  <div class="nav-select overview-wrapper bg-silver none">
     <div class="overview">
       <div class="location-icon-wrapper">
         <div class="locatioin-icon"></div>
@@ -79,7 +79,7 @@
 
 
   <!-- plan -->
-  <div class="nav-select itinerary-wrapper bg-silver none">
+  <div class="nav-select plan-wrapper bg-silver">
     <!-- plan-nav -->
     <div class="plan-nav-wrapper">
       <div class="nav active day-first">01</div>
@@ -90,13 +90,35 @@
       <div class="nav day-sixth">06</div>
     </div>
     <!-- plan-content -->
-    <div style="height: 50vh; width: 100%;" class="plan-content-wrapper">
-      <div class="plan-content">
+    <div class="plan-content-wrapper">
+      <!-- 날짜 -->
+      <div class="plan-content-day"> DAY 1</div>
+      <!-- 내용 -->
+      <div class="day-plan-wrapper plan-day-one">
+
+        <div class="plan-content  active">
+          <div class="plan-circle"></div>
+          <div class="plan-detail-wrapper">
+            <div class="plan-detail-title">
+              <div>출발</div>
+              <div >11:30 AM</div>
+            </div>
+            <div class="plan-detail">hello</div>
+          </div>
+        </div>
+
+        <div class="plan-content">
+          <div class="plan-circle"></div>
+          <div class="plan-detail-wrapper">
+            <div class="plan-detail-title">
+              <div>출발</div>
+              <div style="margin-right: 5px;">11:30 AM</div>
+            </div>
+            <div class="plan-detail">hello</div>
+          </div>
+        </div>
 
       </div>
-    </div>
-  </div>
-  <div style="height: 50vh; width: 100%;" class="plan-content-wrapper"></div>
 
 
   <script>
@@ -138,9 +160,14 @@
           $('.overview-wrapper').removeClass('none')
         } else if($(this).hasClass('itinerary')){
           $('.nav-select').addClass('none')
-          $('.itinerary-wrapper').removeClass('none')
+          $('.plan-wrapper').removeClass('none')
         }
       })
+
+      $('.plan-content').on('click', function(){
+        $(this).siblings().removeClass('active'); 
+        $(this).addClass('active');
+      });
     })
   </script>
 
