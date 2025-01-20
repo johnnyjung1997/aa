@@ -190,21 +190,24 @@ footer{position: absolute; bottom: 3vh; background-color: white;width: 94%; heig
 .plan-nav-wrapper .nav:nth-child(4){color: #FF9494;}
 .plan-nav-wrapper .nav:nth-child(5){color: #9694ff;} 
 .plan-nav-wrapper .nav:nth-child(6){color: #e5c682;}
-
 .plan-content-wrapper{flex: 1; height: 100%;z-index: 1;overflow-x: hidden; overflow-y: scroll;padding: 4% 2% 4% 0;}
 
-.plan-content-wrapper .plan-content-day{ font-size: 1.3rem; font-weight: 700;margin-bottom: 13px; color: #4e4e4e;}
+.plan-content-wrapper .plan-content-day{ font-size: 1.3rem; font-weight: 700;margin-bottom: 13px; color: #6f6f6f; background-color:#f6f6f6;padding-bottom: 15px;}
 
 .plan-content-wrapper .day-plan-wrapper{position: relative; height: auto;font-family: "Noto Sans KR", serif;}
-.plan-content-wrapper .day-plan-wrapper::before{position: absolute; content: '';height: 100%; width: 2px; background-color: #9ec3fb; left: 13px; z-index: -1;}
+.plan-content-wrapper .day-plan-wrapper::before{position: absolute; content: '';height: 100%; width: 2px; background-color: #9ec3fb; left: 12px; z-index: -1;}
 .plan-content-wrapper .plan-content {width: 95%; display: flex; margin-bottom: 18px;}
-.plan-content-wrapper .plan-content .plan-circle{width: 10px;height: 10px; border:2px solid #adc3f6; border-radius: 50%; margin: 7px; background-color: white; margin-right: 5%;}
-.plan-content-wrapper .plan-content .plan-detail-wrapper {flex: 1; border-radius: 7px; background-color: #e3e3e3; padding: 10px 13px;}
-.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail-title{ font-weight: 600; font-size: 1rem; display: flex;justify-content: space-between; color: #3a3a3a; margin-bottom: 10px;}
-.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail-title div:nth-child(1){ font-size: 1.1rem;}
-.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail-title div:nth-child(2){margin-right: 7px; font-size: 0.9rem;}
+.plan-content-wrapper .plan-content .plan-circle{width: 8px;height: 8px; border:2px solid #adc3f6; border-radius: 50%; margin: 7px; background-color: white; margin-right: 7%;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper {flex: 1; border-radius: 7px; background-color: #e3e3e3; padding: 7px 13px;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail-title{ font-weight: 600; display: flex;justify-content: space-between; color: #767676;margin-bottom: 3px; align-items: center;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail-title div:nth-child(1){ font-size: 0.8rem;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail-title div:nth-child(2){margin-right: 7px; font-size: 0.75rem;}
 .plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail{ color: #656565; display: none;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail i{font-size: 0.82rem; width: 8%;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail .mins-take{color: #707070;text-align: right; width: 100%; font-weight: 700; font-size: 0.63rem;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail .link-wrapper{width: 100%; display: flex; margin-top: 7px; gap: 7px;}
+.plan-content-wrapper .plan-content .plan-detail-wrapper .plan-detail .link-wrapper a{font-weight: 700; font-size: 0.6rem; padding: 3px 8px 4px 8px; background-color: white; border-radius: 7px; box-shadow: 0 0 8px 0 rgb(221, 221, 221); color: #5d5d5d;}
  
-.plan-content-wrapper .plan-content.active .plan-detail-wrapper { background-color: #8dbafe;}
-.plan-content-wrapper .plan-content.active .plan-detail-wrapper .plan-detail-title{ font-weight: 600; font-size: 1rem; display: flex;justify-content: space-between; color: white; align-items: center;}
-.plan-content-wrapper .plan-content.active .plan-detail-wrapper .plan-detail{ color: white; display: block;}
+.plan-content-wrapper .plan-content.active .plan-detail-wrapper { background-color: #d2e8ff;}
+.plan-content-wrapper .plan-content.active .plan-detail-wrapper .plan-detail-title{  color: #313131;}
+.plan-content-wrapper .plan-content.active .plan-detail-wrapper .plan-detail{ color: #313131; display: block; font-size: 0.75rem; margin-top: 7px; font-weight: 500;}
